@@ -1,0 +1,221 @@
+﻿/*Подключение шрифтов*/
+@font-face {
+    font-family: 'Shalimar-Regular';
+    src: url('../fonts/Shalimar-Regular.eot');
+    src: local('вє'), url('../fonts/Shalimar-Regular.woff') format('woff'), url('../fonts/Shalimar-Regular.ttf') format('truetype'), url('../fonts/Shalimar-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('../fonts/RobotoMono-VariableFont_wght.eot');
+    src: local('☺'), url('../fonts/RobotoMono-VariableFont_wght.woff') format('woff'), url('../fonts/RobotoMono-VariableFont_wght.ttf') format('truetype'), url('../fonts/RobotoMono-VariableFont_wght.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*###################################### Шапка сайта #############################################*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: RobotoMono;
+}
+
+.main-header {
+    width: 100%;
+    background: linear-gradient(to right, #660033 0%, #ff66cc 100%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-header__logo > h1 {
+    color: white;
+    font-family: Shalimar-Regular, cursive;
+    font-size: 64px;
+}
+
+.main-header__menu {
+    display: flex;
+    align-items: center;
+}
+
+.main-header__list {
+    display: flex;
+}
+
+.list__item {
+    list-style: none;
+    margin-right: 20%;
+}
+
+
+/*############################################ Саб меню #########################################################*/
+.main-sub__menu {
+    width: 100%;
+    background: linear-gradient(to right, #660033 0%, #ff66cc 100%);
+}
+
+.sub-menu__list {
+    display: flex;
+    justify-content: center;
+}
+
+.link__item {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.sub-menu__list > li:not(:last-child) {
+    margin-right: 5%;
+}
+
+.sub-menu__list > li {
+    list-style: none;
+    margin: 2% 0% 1% 0%;
+}
+
+.sub-sub-menu__list > li {
+    list-style: none;
+    display: none;
+}
+
+
+
+
+/*###################################### Отображение товаров #######################################################*/
+.season_name {
+    margin: 0% 15% 0% 20%;
+}
+
+    .season_name > h2 {
+        font-weight: bold;
+        margin-bottom: 3%;
+    }
+
+.wrapper {
+    margin: 0% 15% 0% 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card_good {
+    width: 15em;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .card_good > img {
+        max-width:200px;
+        max-height:267.63px;
+    }
+/*######################################## Адаптив ############################################*/
+@media (min-width:1920px) and (max-width: 2560px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: 0% 17% 0% 22%;
+    }
+
+    .season_name {
+        margin: 0% 17% 0% 22%;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1330px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0% 0% 0% 8%;
+    }
+
+    .season_name {
+        margin: 0% 0% 0% 8%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        margin: 0% 0% 0% 7%;
+    }
+
+    .season_name {
+        margin: 0% 0% 0% 7%;
+    }
+
+    .main-header__menu {
+        visibility: hidden;
+    }
+
+    .main-header__logo {
+        position: absolute;
+    }
+
+    .main-header {
+        height: 100px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        margin: 0% 20%;
+    }
+
+    .season_name {
+        margin: 0;
+    }
+
+        .season_name > h2 {
+            text-align: center;
+        }
+
+    .main-header__menu {
+        visibility: hidden;
+    }
+
+    .main-header__logo {
+        position: absolute;
+    }
+
+    .main-header {
+        height: 100px;
+    }
+}
+
+
+.main-footer {
+    width: 100%;
+    background: linear-gradient(to right, #660033 0%, #ff66cc 100%);
+}
+/*##################################################################*/
+.wrapper-thing{
+    margin: 0px 20% 0px 15%;
+    display: flex;
+}
+.thing_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.wrapper-thing__head{
+    margin-right: 10%;
+}
+.thing_info__description{
+    width: 500px;
+}
+
+.btn__container{
+    width:300px;
+    height:60px;
+    border-radius: 10px;
+}
+.btn__container a {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}

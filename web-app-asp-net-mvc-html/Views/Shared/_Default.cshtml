@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/Main.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        .main-nav__icon {
+            fill: white;
+        }
+        
+        .main-nav__icon:hover {
+            fill: #ffc5f2;
+        } 
+
+        .adm-link {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin-left: 20%;
+        }
+    </style>
+    <header class="main-header">
+        <a href="/Home/Index" class="main-header__logo" style="text-decoration:none">
+            <h1>Shopogolick</h1>
+        </a>
+        <nav class="main-header__menu">
+            <ul class="main-header__list">
+                <li class="list__item">
+                    <a class="link__item" href="">
+                        <svg class="main-nav__icon" height="32px" viewBox="0 0 64 64" width="32px"><g><path d="M23.734,28.125c1.104,0,2-0.896,2-2v-7.8c0-3.487,2.837-6.325,6.324-6.325c3.487,0,6.325,2.838,6.325,6.325v7.8   c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2v-7.8C42.384,12.632,37.752,8,32.058,8c-5.692,0-10.324,4.632-10.324,10.325v7.8   C21.734,27.229,22.63,28.125,23.734,28.125z" /><path d="M55,23.631H44.384v2.494c0,2.206-1.794,4-4,4s-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4s-4-1.794-4-4v-2.494H9   c-0.552,0-0.893,0.435-0.762,0.971l6.998,28.497C15.658,54.701,17.344,56,19,56h26c1.658,0,3.342-1.299,3.766-2.901l6.996-28.497   C55.893,24.065,55.553,23.631,55,23.631z" /></g></svg>
+                    </a>
+                </li>
+                <li class="list__item">
+                    <a href="../Home/About" class="list__item">
+                        <svg class="main-nav__icon" height="32px" viewBox="0 0 64 64" width="32px"><g><path d="M44.525,20.734c0-6.919-5.608-12.527-12.528-12.527s-12.527,5.608-12.527,12.527c0,9.913,12.527,24.581,12.527,24.581   S44.525,30.596,44.525,20.734z M25.819,19.986c0-3.413,2.767-6.179,6.179-6.179c3.412,0,6.179,2.766,6.179,6.179   c0,3.413-2.767,6.179-6.179,6.179C28.586,26.165,25.819,23.399,25.819,19.986z" /><circle cx="31.997" cy="19.986" r="3.038" /><path d="M39.08,40.958c-1.021,1.475-1.979,2.761-2.777,3.793c7.916,0.475,13.104,2.184,15.034,3.456   c-2.261,1.491-8.98,3.587-19.338,3.587c-10.358,0-17.077-2.097-19.338-3.587c1.93-1.271,7.114-2.979,15.022-3.455   c-0.8-1.032-1.759-2.317-2.781-3.792c-9.741,0.959-16.816,3.841-16.816,7.246c0,4.19,10.707,7.588,23.913,7.588   c13.207,0,23.912-3.397,23.912-7.588C55.913,44.799,48.83,41.916,39.08,40.958z" /></g></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    @RenderBody()
+    <hr />
+    <footer style="background: linear-gradient(to right, #660033 0%, #ff66cc 100%); display: flex; flex-direction: column;">
+        @Html.ActionLink("Управление сайтом", "Index", "Products")
+        <br /><br />
+        <p style="color: white; font-size: 28px; text-align:center;">&copy; @DateTime.Now.Year - Shopogolick</p>
+    </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

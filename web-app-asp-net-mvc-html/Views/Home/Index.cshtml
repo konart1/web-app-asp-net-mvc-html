@@ -1,0 +1,21 @@
+﻿@model IEnumerable<web_app_asp_net_mvc_html.Models.Product>
+
+@{
+    ViewBag.Title = "Shopogolick - Интернет магазин одежды";
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+<br />
+<br />
+<div class="season_name"><h2>Горячие товары</h2></div>
+<div class="wrapper">
+
+    @foreach (var item in Model)
+    {
+        <a href="../Home/Thing/@Html.DisplayFor(modelItem => item.Id)" class="card_good"
+           style="text-decoration:none;color:black;">
+            <img src="@Html.DisplayTextFor(modelItem => item.ImagePath)" alt="Товар" />
+            <span><b>@Html.DisplayTextFor(modelItem => item.Price)&#8381;</b></span>
+            <span>@Html.DisplayTextFor(modelItem => item.Name)</span>
+        </a>
+    }
+</div>

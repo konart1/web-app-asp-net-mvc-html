@@ -1,0 +1,29 @@
+﻿@model web_app_asp_net_mvc_html.Models.Product
+@{
+    ViewBag.Title = "Shopogolick - "+Model.Name;
+    Layout = "~/Views/Shared/_Default.cshtml";
+}
+<div class="wrapper-thing">
+    <div class="wrapper-thing__head">
+        <h2 style="margin-bottom:5%;font-size:40px;">@Model.Name</h2>
+        <img src="@Model.ImagePath" alt="@Model.Name" style="max-width:500px;" />
+        <br />
+    </div>
+    <div class="thing_info">
+        <i style="margin-bottom: 3%; font-size: 14px;">Артикул:@Model.Code</i>
+
+        <h3 style="margin-bottom: 3%; font-size: 24px;">@Model.Price&#8381;</h3>
+
+        <p><b>Описание:</b></p>
+        <p class="thing_info__description" style="margin-bottom:3%;">@Model.Description</p>
+
+        <h1 style="margin-bottom:3%;font-size:60px;">@Model.Brand.BrandName<sup>&#8482;</sup></h1>
+
+        <div class="btn__container" style="background-color: #b30059;">
+            <a href="#" style="text-decoration: none; color: white;font-size:18px;">Добавить в корзину</a>
+        </div>
+        
+    </div>
+</div>
+<br /><br /><br /><br />
+

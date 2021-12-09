@@ -1,0 +1,30 @@
+﻿@model web_app_asp_net_mvc_html.Models.Tag
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удалить раздел</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TagName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TagName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться", "Index")
+        </div>
+    }
+</div>
